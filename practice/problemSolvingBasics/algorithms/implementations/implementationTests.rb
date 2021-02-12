@@ -7,4 +7,36 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal true, Implementation.wiring(), ".wiring() returns true"
     end
 
+    def test_gradingStudents
+        assert_equal [75, 67, 40, 33], Implementation.gradingStudents([73, 67, 38, 33]), "gradingStudents([73, 67, 38, 33]) should return [75, 67, 40, 33]"
+        assert_equal [37, 40], Implementation.gradingStudents([37, 38]), "gradingStudents([37, 38]) should return [37, 40]"
+    end
+
+    def test_countApplesAndOranges
+        assert_equal [1, 1], Implementation.countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]), "countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]) should return [1, 1]"
+    end
+
+    def test_kangaroo
+        assert_equal "YES", Implementation.kangaroo(0, 3, 4, 2), "kangaroo(0, 3, 4, 2) returns 'YES'"
+        assert_equal "NO", Implementation.kangaroo(0, 2, 5, 3), "kangaroo(0, 2, 5, 3) returns 'NO'"
+    end
+
+    def test_breakingRecords
+        assert_equal [2, 4], Implementation.breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]), "breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]) returns [2, 4]"
+        assert_equal [4, 0], Implementation.breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42]), "breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]) returns [4, 0]"
+    end
+
+    def test_birthday
+        assert_equal 2, Implementation.birthday([1, 2, 1, 3, 2], 3, 2), "birthday([1, 2, 1, 3, 2], 3, 2) returns 2"
+        assert_equal 0, Implementation.birthday([1, 1, 1, 1, 1, 1], 3, 2), "birthday([1, 1, 1, 1, 1, 1], 3, 2) returns 0"
+        assert_equal 1, Implementation.birthday([4], 4, 1), "birthday([4], 4, 1) returns 1"
+    end
+
+    def test_migratoryBirds
+        assert_equal 4, Implementation.migratoryBirds([1, 4, 4, 4, 5, 3]), "migratoryBirds([1, 4, 4, 4, 5, 3]) returns 4"
+        assert_equal 3, Implementation.migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]), "migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]) returns 3"
+    end
+
+
+
 end

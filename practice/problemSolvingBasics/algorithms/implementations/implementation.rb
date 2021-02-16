@@ -149,4 +149,20 @@ class Implementation
     
     end
 
+    def self.hurdleRace(k, height)
+        biggest_hurdle = 0
+        potion_doses = 0
+        
+        for hurdle in height
+            if hurdle <= k
+                next
+            else
+                if hurdle > biggest_hurdle
+                    biggest_hurdle = hurdle
+                    potion_doses += hurdle - k
+                end
+            end
+        end
+        return potion_doses
+    end
 end

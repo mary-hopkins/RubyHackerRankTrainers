@@ -37,6 +37,10 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal 3, Implementation.migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]), "migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]) returns 3"
     end
 
+    def test_hurdleRace
+        assert_equal 2, Implementation.hurdleRace(4, [1, 6, 3, 5, 2]), "hurdleRace(4, [1, 6, 3, 5, 2]) returns 2"
+        assert_equal 0, Implementation.hurdleRace(7, [2, 5, 4, 5, 2]), "hurdleRace(7, [2, 5, 4, 5, 2]) returns 0"
+    end
 
 
 end

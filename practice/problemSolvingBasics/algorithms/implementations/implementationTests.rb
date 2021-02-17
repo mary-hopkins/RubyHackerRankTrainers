@@ -42,5 +42,20 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal 0, Implementation.hurdleRace(7, [2, 5, 4, 5, 2]), "hurdleRace(7, [2, 5, 4, 5, 2]) returns 0"
     end
 
+    def test_happyLadybugs
+        assert_equal "NO", Implementation.happyLadybugs("AABBC"), "happyLadybugs('AABBC') returns 'NO'"
+        assert_equal "YES", Implementation.happyLadybugs("AABBC_C"), "happyLadybugs('AABBC_C') returns 'YES'"
+        assert_equal "YES", Implementation.happyLadybugs("_"), "happyLadybugs('_') returns 'YES'"
+        assert_equal "YES", Implementation.happyLadybugs("DD__FQ_QQF"), "happyLadybugs('DD__FQ_QQF') returns 'YES'"
+        assert_equal "NO", Implementation.happyLadybugs("AABCBC"), "happyLadybugs('AABCBC') returns 'NO'"
+
+        assert_equal "NO", Implementation.happyLadybugs("G"), "happyLadybugs('G') returns 'NO'"
+        assert_equal "NO", Implementation.happyLadybugs("GR"), "happyLadybugs('GR') returns 'NO'"
+        assert_equal "NO", Implementation.happyLadybugs("_GR_"), "happyLadybugs('_GR_') returns 'NO'"
+        assert_equal "NO", Implementation.happyLadybugs("_R_G_"), "happyLadybugs('_R_G_') returns 'NO'"
+        assert_equal "YES", Implementation.happyLadybugs("R_R_R"), "happyLadybugs('R_R_R') returns 'YES'"
+        assert_equal "YES", Implementation.happyLadybugs("RRGGBBXX"), "happyLadybugs('RRGGBBXX') returns 'YES'"
+        assert_equal "NO", Implementation.happyLadybugs("RRGGBBXY"), "happyLadybugs('RRGGBBXY') returns 'NO'"
+    end
 
 end

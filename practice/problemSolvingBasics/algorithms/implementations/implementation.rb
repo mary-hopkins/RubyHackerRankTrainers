@@ -165,4 +165,26 @@ class Implementation
         end
         return potion_doses
     end
+
+    def self.happyLadybugs(b)
+        bug_array = b.split("")
+    
+        return "NO" if bug_array.length <= 1 && bug_array[0] != "_"
+        
+        if bug_array.include? "_"
+            bug_array = bug_array.sort
+        end
+
+        bug_array.each_with_index do |bug, index|
+            if bug === "_"
+                next
+            elsif (bug == bug_array[index + 1]) || (bug == bug_array[index - 1])
+                next
+            else
+                return "NO"
+            end
+        end
+        return "YES"    
+    end
+    
 end

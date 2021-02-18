@@ -187,4 +187,16 @@ class Implementation
         return "YES"    
     end
     
+    def self.catAndMouse(x, y, z)
+        tom_cat = (x - z).abs
+        quincy = (y - z).abs
+        if tom_cat == quincy
+            return "Mouse C"
+        elsif tom_cat < quincy
+            return "Cat A"
+        else
+            return "Cat B"
+        end
+    end
+
 end

@@ -58,4 +58,8 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal "NO", Implementation.happyLadybugs("RRGGBBXY"), "happyLadybugs('RRGGBBXY') returns 'NO'"
     end
 
+    def test_catAndMouse
+        assert_equal "Cat B", Implementation.catAndMouse(1, 2, 3), "catAndMouse(1, 2, 3) will return Cat B"
+        assert_equal "Mouse C", Implementation.catAndMouse(1, 3, 2), "catAndMouse(1, 3, 2) will return Mouse C"
+    end
 end

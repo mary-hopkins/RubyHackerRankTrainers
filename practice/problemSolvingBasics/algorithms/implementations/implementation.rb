@@ -199,4 +199,27 @@ class Implementation
         end
     end
 
+    def self.cavityMap(grid)
+        new_grid = []
+        grid.each_with_index do |row, j| 
+            if j != 0 && j != (grid.length - 1)
+                row_array = row.split("")
+                row_array.each_with_index do | depth, h |
+                    if h == 0 || h == (grid.length - 1)
+                    else
+                        north = grid[j + 1][h]
+                        south = grid[j - 1][h]
+                        east = grid[j][h + 1]
+                        west = grid[j][h - 1]
+
+                        if depth > north && depth > south && depth > east && depth > west
+                            row[h] = "X"
+                        end
+                    end
+                end
+            end
+        end
+        return grid
+    end
+
 end

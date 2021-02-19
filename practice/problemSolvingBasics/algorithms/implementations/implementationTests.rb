@@ -62,4 +62,9 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal "Cat B", Implementation.catAndMouse(1, 2, 3), "catAndMouse(1, 2, 3) will return Cat B"
         assert_equal "Mouse C", Implementation.catAndMouse(1, 3, 2), "catAndMouse(1, 3, 2) will return Mouse C"
     end
+
+    def test_cavityMap
+        assert_equal ['989', '1X1', '111'], Implementation.cavityMap(['989', '191', '111']), "cavityMap(['989', '191', '111']) returns ['989', '1X1', '111']"
+        assert_equal ['1112', '1X12', '18X2', '1234'], Implementation.cavityMap(['1112', '1912', '1892', '1234']), "cavityMap(['1112', '1912', '1892', '1234']) returns ['1112', '1X12', '18X2', '1234']"
+    end
 end

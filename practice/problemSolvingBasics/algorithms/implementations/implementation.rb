@@ -222,4 +222,15 @@ class Implementation
         return grid
     end
 
+    def self.bonAppetit(bill, k, b)
+        bill.delete_at(k)
+        anna_portion = bill.inject(0){|sum,x| sum + x } / 2
+
+        if anna_portion == b
+            return "Bon Appetit"
+        else
+            return (b - anna_portion).to_s
+        end
+    end
+
 end

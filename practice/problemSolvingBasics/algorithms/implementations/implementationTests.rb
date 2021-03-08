@@ -67,4 +67,9 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal ['989', '1X1', '111'], Implementation.cavityMap(['989', '191', '111']), "cavityMap(['989', '191', '111']) returns ['989', '1X1', '111']"
         assert_equal ['1112', '1X12', '18X2', '1234'], Implementation.cavityMap(['1112', '1912', '1892', '1234']), "cavityMap(['1112', '1912', '1892', '1234']) returns ['1112', '1X12', '18X2', '1234']"
     end
+
+    def test_bonAppetit
+        assert_equal "5", Implementation.bonAppetit([3, 10, 2, 9], 1, 12), "bonAppetit([3, 10, 2, 9], 1, 12)) returns 5"
+        assert_equal "Bon Appetit", Implementation.bonAppetit([3, 10, 2, 9], 1, 7), "bonAppetit([3, 10, 2, 9], 1, 12)) returns Bon Appetit" 
+    end
 end

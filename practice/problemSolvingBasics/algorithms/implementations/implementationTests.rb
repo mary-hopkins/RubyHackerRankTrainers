@@ -72,4 +72,9 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal "5", Implementation.bonAppetit([3, 10, 2, 9], 1, 12), "bonAppetit([3, 10, 2, 9], 1, 12)) returns 5"
         assert_equal "Bon Appetit", Implementation.bonAppetit([3, 10, 2, 9], 1, 7), "bonAppetit([3, 10, 2, 9], 1, 12)) returns Bon Appetit" 
     end
+
+    def test_designerPdfViewer
+        assert_equal 9, Implementation.designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], "abc"), "designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], 'abc') returns 9"
+        assert_equal 28, Implementation.designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba"), "designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], 'zaba') returns 28"
+    end
 end

@@ -233,4 +233,14 @@ class Implementation
         end
     end
 
+    def self.designerPdfViewer(h, word)
+        alphabet = ('a'..'z').to_a
+        word_indexes = []
+        letter_heights = []
+
+        (word.chars).each {|l| word_indexes.push(alphabet.index(l))}
+        word_indexes.each {|i| letter_heights.push(h[i])}
+    
+        return (letter_heights.max * word.length)
+    end
 end

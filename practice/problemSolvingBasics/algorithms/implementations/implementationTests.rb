@@ -77,4 +77,11 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal 9, Implementation.designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], "abc"), "designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], 'abc') returns 9"
         assert_equal 28, Implementation.designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba"), "designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], 'zaba') returns 28"
     end
+
+    def test_utopianTree
+        assert_equal 1, Implementation.untopianTree(0), "utopianTree(0) returns 1"
+        assert_equal 2, Implementation.untopianTree(1), "utopianTree(1) returns 2"
+        assert_equal 7, Implementation.untopianTree(4), "utopianTree(4) returns 7"
+        assert_equal 6, Implementation.untopianTree(3), "utopianTree(3) returns 6"
+    end
 end

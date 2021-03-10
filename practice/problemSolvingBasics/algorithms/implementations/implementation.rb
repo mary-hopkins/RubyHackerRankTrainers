@@ -243,4 +243,16 @@ class Implementation
     
         return (letter_heights.max * word.length)
     end
+
+    def self.untopianTree(n)
+        sapling = 1
+        n.times do |num| 
+            if (num + 1).odd?
+                sapling = sapling * 2
+            else 
+                sapling = sapling + 1
+            end
+        end
+        return sapling
+    end
 end

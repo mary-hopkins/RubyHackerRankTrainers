@@ -84,4 +84,11 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal 7, Implementation.untopianTree(4), "utopianTree(4) returns 7"
         assert_equal 6, Implementation.untopianTree(3), "utopianTree(3) returns 6"
     end
+
+    def test_angryProfessor
+        assert_equal "YES", Implementation.angryProfessor(3, [-1, -3, 4, 2]), "angryProfessor(3, [-1, -3, 4, 2]) returns 'YES'"
+        assert_equal "NO", Implementation.angryProfessor(2, [0, -1, 2, 1]), "angryProfessor(2, [0, -1, 2, 1]) returns 'NO'"
+        assert_equal "NO", Implementation.angryProfessor(4, [-93, -86, 49, -62, -90, -63, 40, 72, 11, 67]), "angryProfessor(4, [-93, -86, 49, -62, -90, -63, 40, 72, 11, 67]) returns 'NO'"
+        assert_equal "YES", Implementation.angryProfessor(10, [23, -35, -2, 58, -67, -56, -42, -73, -19, 37]), "angryProfessor(10, [23, -35, -2, 58, -67, -56, -42, -73, -19, 37]) returns 'YES'"
+    end
 end

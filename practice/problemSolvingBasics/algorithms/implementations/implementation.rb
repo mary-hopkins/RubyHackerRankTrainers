@@ -255,4 +255,13 @@ class Implementation
         end
         return sapling
     end
+
+    def self.angryProfessor(k, a)
+        onTime = a.select {|num| num <= 0 }
+        if onTime.length >= k
+            return "NO"
+        else 
+            return "YES"
+        end
+    end
 end

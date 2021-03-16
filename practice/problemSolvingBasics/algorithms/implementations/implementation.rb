@@ -264,4 +264,29 @@ class Implementation
             return "YES"
         end
     end
+
+    def self.appendAndDelete(s, t, k)
+        first = s.split("")
+        second = t.split("")
+        
+        return "Yes" if first == second
+    
+        similar = 0
+        first.each_with_index do | letter, index |
+            if letter == second[index]
+                index == first.length - 1 ? similar = index : similar = similar
+                next
+            else
+                similar = index
+                break
+            end
+        end
+        
+        if (first[similar..-1].length) + (second[similar..-1].length) <= k
+            return "Yes"
+        else
+            return "No"
+        end
+    
+    end
 end

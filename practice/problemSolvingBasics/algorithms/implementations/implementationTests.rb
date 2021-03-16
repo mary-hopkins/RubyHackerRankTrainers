@@ -91,4 +91,11 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal "NO", Implementation.angryProfessor(4, [-93, -86, 49, -62, -90, -63, 40, 72, 11, 67]), "angryProfessor(4, [-93, -86, 49, -62, -90, -63, 40, 72, 11, 67]) returns 'NO'"
         assert_equal "YES", Implementation.angryProfessor(10, [23, -35, -2, 58, -67, -56, -42, -73, -19, 37]), "angryProfessor(10, [23, -35, -2, 58, -67, -56, -42, -73, -19, 37]) returns 'YES'"
     end
+
+    def test_appendAndDelete
+        assert_equal "Yes", Implementation.appendAndDelete("abc", "def", 6), "appendAndDelete('abc', 'def', 6) returns 'Yes'"
+        assert_equal "Yes", Implementation.appendAndDelete("hackerhappy", "hackerrank", 9), "appendAndDelete('hackerhappy', 'hackerrank', 9 returns 'Yes'"
+        assert_equal "Yes", Implementation.appendAndDelete("zzzzz", "zzzzzzz", 4), "appendAndDelete('zzzzz', 'zzzzzzz', 4) returns 'Yes'"
+        assert_equal "No", Implementation.appendAndDelete("ashley", "ash", 2), "appendAndDelete('ashley', 'ash', 2) returns 'No'" 
+    end
 end

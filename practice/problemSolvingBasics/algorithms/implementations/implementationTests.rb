@@ -98,4 +98,12 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal "Yes", Implementation.appendAndDelete("zzzzz", "zzzzzzz", 4), "appendAndDelete('zzzzz', 'zzzzzzz', 4) returns 'Yes'"
         assert_equal "No", Implementation.appendAndDelete("ashley", "ash", 2), "appendAndDelete('ashley', 'ash', 2) returns 'No'" 
     end
+
+    def test_findDigits
+        assert_equal 3, Implementation.findDigits(124), "findDigits(124) returns 3"
+        assert_equal 3, Implementation.findDigits(111), "findDigits(111) returns 3"
+        assert_equal 1, Implementation.findDigits(10), "findDigits(10) returns 1"
+        assert_equal 2, Implementation.findDigits(12), "findDigits(12) returns 2"
+        assert_equal 3, Implementation.findDigits(1012), "findDigits(1012) returns 3"
+    end
 end

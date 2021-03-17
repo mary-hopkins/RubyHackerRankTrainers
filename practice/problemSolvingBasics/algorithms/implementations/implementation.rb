@@ -289,4 +289,16 @@ class Implementation
         end
     
     end
+
+    def self.findDigits(n)
+        numberArray = n.to_s.split('').map(&:to_i)
+        divsorCounter = 0
+        for number in numberArray
+            next if number == 0
+            if n % number == 0
+                divsorCounter = divsorCounter + 1
+            end
+        end    
+        return divsorCounter
+    end
 end

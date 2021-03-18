@@ -301,4 +301,20 @@ class Implementation
         end    
         return divsorCounter
     end
+
+    def self.minimumDistances(a)
+        indexDelta = a.length
+        a.each_with_index do |element, index| 
+            a.each_with_index do | number, index_of_number |
+                if element == number && index != index_of_number
+                    new_index = (index - index_of_number).abs
+                    if new_index < indexDelta 
+                        indexDelta = new_index
+                    end
+                end
+            end
+        end
+        return -1 if indexDelta == a.length
+        return indexDelta
+    end
 end

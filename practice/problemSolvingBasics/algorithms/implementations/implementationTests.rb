@@ -106,4 +106,9 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal 2, Implementation.findDigits(12), "findDigits(12) returns 2"
         assert_equal 3, Implementation.findDigits(1012), "findDigits(1012) returns 3"
     end
+
+    def test_minimumDistances
+        assert_equal 3, Implementation.minimumDistances([7, 1, 3, 4, 1, 7]), "minimumDistances([7, 1, 3, 4, 1, 7]) returns 3"
+        assert_equal -1,Implementation.minimumDistances([1, 2, 3, 4, 10]), "minimumDistances([1, 2, 3, 4, 10]) returns -1"
+    end
 end

@@ -111,4 +111,9 @@ class ImplementationTest < Test::Unit::TestCase
         assert_equal 3, Implementation.minimumDistances([7, 1, 3, 4, 1, 7]), "minimumDistances([7, 1, 3, 4, 1, 7]) returns 3"
         assert_equal -1,Implementation.minimumDistances([1, 2, 3, 4, 10]), "minimumDistances([1, 2, 3, 4, 10]) returns -1"
     end
+
+    def test_divisibleSumPairs
+        assert_equal 5, Implementation.divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2]), "divisibleSumPairs() returns 5"
+        assert_equal 3, Implementation.divisibleSumPairs(6, 5, [1, 2, 3, 4, 5, 6]), "divisibleSumPairs() returns 3"
+    end
 end

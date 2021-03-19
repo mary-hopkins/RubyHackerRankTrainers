@@ -317,4 +317,16 @@ class Implementation
         return -1 if indexDelta == a.length
         return indexDelta
     end
+
+    def self.divisibleSumPairs(n, k, ar)
+        pair_counter = 0;
+        ar.each_with_index do |num, index|
+            ar.each_with_index do |sub_num, sub_index|
+                if (index < sub_index) && ((num + sub_num) % k == 0)
+                    pair_counter = pair_counter + 1
+                end
+            end
+        end
+        return pair_counter
+    end
 end

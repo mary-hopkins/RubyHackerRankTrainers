@@ -1,7 +1,4 @@
 class Implementation
-    def self.wiring()
-        return true
-    end
 
     def self.gradingStudents(grades)
         curved_grades = []

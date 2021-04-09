@@ -10,4 +10,10 @@ class StringAlgorithmsTest < Test::Unit::TestCase
         assert_equal 7, StringAlgorithms.camelcase("thisIsATestOfTheFucntion"), "camelcase('thisIsATestOfTheFunction') returns 7"
     end
 
+    def test_hackerrankInStrings
+        assert_equal "YES", StringAlgorithms.hackerrankInString("hhaacckkekraraannk"), "hackerrankInString('hhaacckkekraraannk') returns 'YES'"
+        assert_equal "YES", StringAlgorithms.hackerrankInString("hereiamstackerrank"), "hackerrankInString('hereiamstackerrank') returns 'YES'"
+        assert_equal "NO", StringAlgorithms.hackerrankInString("rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt"), "hackerrankInString('rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt') returns 'NO'"
+        assert_equal "NO", StringAlgorithms.hackerrankInString("hackerworld"), "hackerrankInString('hackerworld') returns 'NO'"
+    end
 end
